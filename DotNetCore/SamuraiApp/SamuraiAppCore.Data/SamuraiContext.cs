@@ -1,7 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
-using SamuraiApp.Domain;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using Microsoft.EntityFrameworkCore;
+using SamuraiAppCore.Domain;
 
-namespace SamuraiApp.Data
+namespace SamuraiAppCore.Data
 {
     public class SamuraiContext : DbContext
     {
@@ -12,7 +15,7 @@ namespace SamuraiApp.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(
-                @"Server = (localdb)\mssqllocaldb; Database = SamuraiData; Trusted_Connection = True;");
+                @"Server = (localdb)\mssqllocaldb; Database = SamuraiDataCore; Trusted_Connection = True;");
         }
     }
 }
